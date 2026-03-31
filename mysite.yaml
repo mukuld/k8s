@@ -1,0 +1,23 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mysite
+  namespace: development
+  labels:
+    app: mysite-service
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: mysite-service
+  template:
+    metadata:
+      labels:
+        app: mysite-service
+    spec:
+      containers:
+      - name: mysite-container
+        image: mukul/nginx-web
+        ports:
+          - containerPort: 80 #This is the port on which the application inside the pod is running. This must match the TargetPort inside the service definition
