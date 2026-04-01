@@ -1,15 +1,8 @@
 apiVersion: metallb.io/v1beta1
 kind: IPAddressPool
 metadata:
-  annotations:
-    kubectl.kubernetes.io/last-applied-configuration: |
-      {"apiVersion":"metallb.io/v1beta1","kind":"IPAddressPool","metadata":{"annotations":{},"name":"default-addresspool","namespace":"metallb-system"},"spec":{"addresses":["192.168.1.240-192.168.1.250"]}}
-  creationTimestamp: "2026-03-31T20:48:28Z"
-  generation: 2
   name: default-addresspool
   namespace: metallb-system
-  resourceVersion: "15119"
-  uid: 6196e701-7320-4059-9e81-a25342b5f941
 spec:
   addresses:
   - 172.28.62.192-172.28.62.202 # This is a range on your local network which is outside of your DHCP range
