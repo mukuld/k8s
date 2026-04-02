@@ -18,6 +18,6 @@ spec:
     spec:
       containers:
       - name: mysite-container
-        image: mukul/nginx-web
+        image: mukul/nginx-web:v1.28.3  # Pinning my container on the stable version of Nginx as of April 1 2026
         ports:
           - containerPort: 80 #This is the port on which the application inside the pod is running. This must match the TargetPort inside the service definition
